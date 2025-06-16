@@ -1,0 +1,326 @@
+/* Reset i osnovni stilovi */
+
+@font-face {
+    font-family: SaraKnezevic;
+    src: url(/ASSETS/Sara_Knezevic_projektni_zadatak1.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header stilovi */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  font-family: SaraKnezevic;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #ecf0f1;
+  position: relative;
+  z-index: 1;
+  font-style: italic;
+}
+
+/* Navigacija */
+.navigation {
+  background: #34495e;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background: #2c3e50;
+  border-bottom-color: #3498db;
+  transform: translateY(-2px);
+}
+
+/* Glavni sadržaj */
+.content {
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* O meni stranica */
+.about-section h3,
+.exercises-section h3,
+.video-section h3 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.about-section h4,
+.exercises-section h4,
+.video-section h4 {
+  color: #34495e;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.interests ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.interests li {
+  background: #ecf0f1;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+}
+
+/* Galerija slika */
+
+.gallery{
+    margin-bottom: 50px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.image-item {
+  height: fit-content;
+  width: 100%;
+  text-align: center;
+  background: hsla(204, 70%, 53%, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+  transform: translateY(-5px);
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Video link */
+.video-link {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 1rem 0;
+  transition: background 0.3s ease;
+}
+
+.video-link:hover {
+  background: #2980b9;
+}
+
+
+/* Vježbe stranica */
+.exercise-block {
+  background: white;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3498db;
+}
+
+.exercise-images {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: fit-content;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.exercise-images img {
+  
+  min-width: 250px;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Video stranica */
+.video-container{
+  margin: 2rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-description {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+
+.vjezba1{
+  font-family: SaraKnezevic;
+  font-size: 1.5rem;
+}
+
+.projektni1{
+  font-family: SaraKnezevic;
+  font-size: 1.3rem;
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+/*
+ Responzivni dizajn 
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    padding: 0.8rem 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exercise-images {
+    flex-direction: column;
+  }
+
+  .exercise-images img {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .exercise-block {
+    padding: 1rem;
+  }
+}
+*/
+
